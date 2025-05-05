@@ -1,0 +1,67 @@
+{
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "拼饭",
+        "enablePullDownRefresh": true
+      }
+    },
+    {
+      "path": "pages/detail/detail",
+      "style": {
+        "navigationBarTitleText": "拼饭详情"
+      }
+    },
+    {
+      "path": "pages/create/create",
+      "style": {
+        "navigationBarTitleText": "发起拼饭"
+      }
+    },
+    {
+      "path": "pages/message/message",
+      "style": {
+        "navigationBarTitleText": "消息"
+      }
+    },
+    {
+      "path": "pages/profile/profile",
+      "style": {
+        "navigationBarTitleText": "我的"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "拼饭",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#F8F9FA"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#FF6B35",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/images/home.png",
+        "selectedIconPath": "static/images/home-active.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "static/images/message.png",
+        "selectedIconPath": "static/images/message-active.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "static/images/profile.png",
+        "selectedIconPath": "static/images/profile-active.png"
+      }
+    ]
+  }
+}
