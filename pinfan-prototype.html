@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--
+文件名: pinfan-prototype.html
+描述: 拼饭微信小程序HTML原型图
+作者: Claude AI
+创建日期: 2023-05-04
+-->
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>拼饭 - 微信小程序原型</title>
+  <style>
+    /* 全局样式 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "微软雅黑", sans-serif;
+    }
+
+    body {
+      background-color: #F8F9FA;
+      color: #333333;
+      font-size: 14px;
+      line-height: 1.5;
+      max-width: 414px;
+      /* 模拟手机屏幕宽度 */
+      margin: 0 auto;
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* 公共组件样式 */
+    .container {
+      padding: 15px;
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+
+    .header {
+      height: 44px;
+      background-color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      border-bottom: 1px solid #EEEEEE;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .header .back {
+      position: absolute;
+      left: 15px;
+      font-size: 20px;
+    }
+
+    /* 搜索栏和页面基本元素 */
+    .search-bar {
+      background-color: white;
+      padding: 10px 15px;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-input {
+      background-color: #F2F2F2;
+      border-radius: 16px;
+      border: none;
+      padding: 6px 12px 6px 32px;
+      width: 100%;
+      font-size: 14px;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 25px;
+      color: #999999;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    拼饭
+  </div>
+  
+  <div class="search-bar">
+    <span class="search-icon">🔍</span>
+    <input type="text" class="search-input" placeholder="搜索拼饭活动...">
+  </div>
+
+  <div class="container">
+    <h3>附近的拼饭活动</h3>
+    <!-- 活动列表将在这里 -->
+  </div>
+
+  <div class="tabbar">
+    <div class="tab-item active">
+      <div class="tab-icon">🏠</div>
+      <div>首页</div>
+    </div>
+    <div class="tab-item">
+      <div class="tab-icon">💬</div>
+      <div>消息</div>
+    </div>
+    <div class="tab-item">
+      <div class="tab-icon">👤</div>
+      <div>我的</div>
+    </div>
+  </div>
+</body>
+
+</html>
