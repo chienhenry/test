@@ -58,7 +58,89 @@
       font-size: 20px;
     }
 
-    /* 搜索栏和页面基本元素 */
+    .btn {
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-size: 14px;
+      text-align: center;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+
+    .btn:active {
+      opacity: 0.8;
+    }
+
+    .btn-primary {
+      background-color: #FF6B35;
+      color: white;
+      border: none;
+    }
+
+    .btn-secondary {
+      background-color: white;
+      color: #FF6B35;
+      border: 1px solid #FF6B35;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 12px;
+      padding: 12px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #DDDDDD;
+      border-radius: 8px;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .input:focus {
+      border-color: #FF6B35;
+      outline: none;
+    }
+
+    /* 底部导航 */
+    .tabbar {
+      height: 50px;
+      display: flex;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: white;
+      border-top: 1px solid #EEEEEE;
+      max-width: 414px;
+      margin: 0 auto;
+    }
+
+    .tab-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: #999999;
+      cursor: pointer;
+    }
+
+    .tab-item.active {
+      color: #FF6B35;
+    }
+
+    .tab-icon {
+      font-size: 24px;
+      margin-bottom: 2px;
+    }
+
+    /* 页面组件 */
     .search-bar {
       background-color: white;
       padding: 10px 15px;
@@ -81,6 +163,88 @@
       left: 25px;
       color: #999999;
     }
+
+    .filter-tabs {
+      display: flex;
+      background-color: white;
+      padding: 10px 15px;
+      border-bottom: 1px solid #EEEEEE;
+    }
+
+    .filter-tab {
+      margin-right: 15px;
+      font-size: 14px;
+      color: #666666;
+      padding-bottom: 5px;
+      cursor: pointer;
+    }
+
+    .filter-tab.active {
+      color: #FF6B35;
+      border-bottom: 2px solid #FF6B35;
+    }
+
+    .meal-card {
+      display: flex;
+      margin-bottom: 15px;
+    }
+
+    .meal-image {
+      width: 80px;
+      height: 80px;
+      border-radius: 8px;
+      margin-right: 10px;
+      background-color: #EEEEEE;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #999999;
+    }
+
+    .meal-info {
+      flex: 1;
+    }
+
+    .meal-title {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .meal-location {
+      font-size: 13px;
+      color: #666666;
+      margin-bottom: 5px;
+    }
+
+    .meal-time {
+      font-size: 12px;
+      color: #999999;
+      margin-bottom: 5px;
+    }
+
+    .meal-people {
+      font-size: 12px;
+      color: #FF6B35;
+    }
+
+    .create-btn {
+      position: fixed;
+      bottom: 65px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #FF6B35;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      box-shadow: 0 2px 10px rgba(255, 107, 53, 0.3);
+      cursor: pointer;
+      z-index: 100;
+    }
   </style>
 </head>
 
@@ -94,10 +258,46 @@
     <input type="text" class="search-input" placeholder="搜索拼饭活动...">
   </div>
 
-  <div class="container">
-    <h3>附近的拼饭活动</h3>
-    <!-- 活动列表将在这里 -->
+  <div class="filter-tabs">
+    <div class="filter-tab active">最新</div>
+    <div class="filter-tab">距离</div>
+    <div class="filter-tab">人气</div>
+    <div class="filter-tab">筛选</div>
   </div>
+
+  <div class="container">
+    <div class="meal-card">
+      <div class="meal-image">图片</div>
+      <div class="meal-info">
+        <div class="meal-title">一起吃火锅</div>
+        <div class="meal-location">海底捞（万象城店）</div>
+        <div class="meal-time">今天 18:30</div>
+        <div class="meal-people">2/4人</div>
+      </div>
+    </div>
+    
+    <div class="meal-card">
+      <div class="meal-image">图片</div>
+      <div class="meal-info">
+        <div class="meal-title">寻找日料爱好者</div>
+        <div class="meal-location">大渔铁板烧（星光广场店）</div>
+        <div class="meal-time">明天 12:00</div>
+        <div class="meal-people">1/3人</div>
+      </div>
+    </div>
+    
+    <div class="meal-card">
+      <div class="meal-image">图片</div>
+      <div class="meal-info">
+        <div class="meal-title">午餐交友</div>
+        <div class="meal-location">西贝莜面村（金茂汇店）</div>
+        <div class="meal-time">今天 12:30</div>
+        <div class="meal-people">2/2人</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="create-btn">+</div>
 
   <div class="tabbar">
     <div class="tab-item active">
